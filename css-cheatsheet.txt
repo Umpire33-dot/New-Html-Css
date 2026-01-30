@@ -1,0 +1,163 @@
+Common CSS properties — purpose, common values, and examples
+
+1) padding
+- Purpose: Space inside an element between content and border.
+- Values: length (px, rem), %, shorthand (top right bottom left).
+- Example: padding: 16px;  /* all sides */
+- Shorthand: padding: 10px 5px; /* vertical | horizontal */
+
+2) margin
+- Purpose: Space outside an element separating it from neighbors.
+- Values: length, %, auto (center horizontally), shorthand.
+- Example: margin: 0 auto; /* horizontal center with fixed width */
+
+3) width / height
+- Purpose: Sets element width/height.
+- Values: px, %, vw/vh, auto, min/max variants.
+- Example: width: 100%; height: 200px;
+
+4) max-width / min-width (and max-height / min-height)
+- Purpose: Constrain sizing for responsive layouts.
+- Values: px, %, none.
+- Example: max-width: 1200px;
+
+5) box-sizing
+- Purpose: Controls whether padding and border are included in width/height.
+- Values: content-box (default), border-box.
+- Example: box-sizing: border-box; /* recommended */
+
+6) display
+- Purpose: Defines how element participates in layout.
+- Values: block, inline, inline-block, flex, grid, none.
+- Example: display: flex;
+
+7) position
+- Purpose: Controls how element is positioned relative to normal flow.
+- Values: static, relative, absolute, fixed, sticky.
+- Example: position: relative; top: 10px;
+
+8) top / right / bottom / left
+- Purpose: Offsets applied when position != static.
+- Values: px, %, etc.
+- Example: position: absolute; top: 0; right: 0;
+
+9) color
+- Purpose: Text color.
+- Values: named colors, hex, rgb(), rgba(), hsl().
+- Example: color: #333333;
+
+10) background-color / background-image
+- Purpose: Background fill or image for an element.
+- Values: color, url(...), gradients.
+- Example: background-color: lightblue; background-image: url('img.jpg');
+
+11) background-size / background-position / background-repeat
+- Purpose: Control image fitting and placement.
+- Values: cover, contain, center, no-repeat, etc.
+- Example: background-size: cover;
+
+12) border / border-radius
+- Purpose: Border around elements and rounded corners.
+- Values: border: <width> <style> <color>; border-radius: px/%.
+- Example: border: 2px solid #ccc; border-radius: 8px;
+
+13) box-shadow
+- Purpose: Drop shadow effect.
+- Values: offset-x offset-y blur spread color (inset optional).
+- Example: box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+
+14) font-family / font-size / font-weight / line-height
+- Purpose: Control typography.
+- Values: lists of fonts, px/rem/em, normal/bold/700, numeric line-height.
+- Example: font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5;
+
+15) text-align / text-decoration / text-transform
+- Purpose: Text alignment, decoration (underline), and case-transform.
+- Values: left/center/right/justify; underline/none; uppercase/lowercase/none.
+- Example: text-align: center; text-transform: uppercase;
+
+16) opacity
+- Purpose: Element transparency.
+- Values: 0 (transparent) to 1 (opaque).
+- Example: opacity: 0.8;
+
+17) z-index
+- Purpose: Stacking order for positioned elements.
+- Values: integer; only applies when position != static.
+- Example: z-index: 10;
+
+18) overflow / overflow-x / overflow-y
+- Purpose: Handling content that exceeds container bounds.
+- Values: visible, hidden, scroll, auto.
+- Example: overflow: auto;
+
+19) cursor
+- Purpose: Mouse cursor when hovering an element.
+- Values: pointer, default, text, move, etc.
+- Example: cursor: pointer;
+
+20) visibility
+- Purpose: Show or hide element but preserve layout space.
+- Values: visible, hidden, collapse.
+- Example: visibility: hidden;
+
+21) transform
+- Purpose: 2D/3D transformations (translate, rotate, scale).
+- Values: transform: translateX(), rotate(), scale().
+- Example: transform: translateY(-10px) scale(1.05);
+
+22) transition
+- Purpose: Smoothly animate property changes.
+- Values: transition: <property> <duration> <timing> <delay>.
+- Example: transition: all 0.2s ease;
+
+23) animation
+- Purpose: Keyframe animations.
+- Values: animation-name duration timing-function delay iteration-count direction.
+- Example: animation: fadeIn 1s ease-in;
+
+24) flex container basics (when display: flex)
+- display: flex; /* makes a flex container */
+- flex-direction: row | column | row-reverse | column-reverse;
+- justify-content: flex-start | center | space-between | space-around | space-evenly; /* main axis */
+- align-items: stretch | center | flex-start | flex-end | baseline; /* cross axis */
+- gap: spacing between items (px/rem).
+- Example: display: flex; justify-content: center; gap: 12px;
+
+25) flex item shorthand
+- flex: <grow> <shrink> <basis>; /* e.g., flex: 1 1 0 */
+- Example: .item { flex: 1; } /* grow to fill available space */
+
+26) grid basics (when display: grid)
+- display: grid;
+- grid-template-columns / grid-template-rows: define tracks (e.g., 1fr 2fr 200px);
+- gap: spacing between grid cells.
+- Example: display: grid; grid-template-columns: 1fr 300px; gap: 16px;
+
+27) list-style / list-style-type
+- Purpose: Control bullets/numbers on lists.
+- Values: none, disc, circle, decimal.
+- Example: list-style: none;
+
+28) outline
+- Purpose: Non-layout-affecting focus ring or highlight.
+- Values: width style color.
+- Example: outline: 2px solid #005fcc;
+
+29) resize
+- Purpose: Allow user to resize an element (textarea).
+- Values: none, both, horizontal, vertical.
+- Example: resize: vertical;
+
+30) user-select
+- Purpose: Control text selection behavior.
+- Values: auto, text, none.
+- Example: user-select: none; /* disable selection */
+
+Quick tips:
+- Use rem units for scalable typography, px for precise control, % for fluid layouts.
+- Start mobile-first: write base (single column) styles, then add media queries for larger screens.
+- Keep `box-sizing: border-box;` to simplify width calculations.
+- Validate with browser devtools: inspect computed styles and test responsive breakpoints.
+
+If you want, I can also create a short example `.css` file demonstrating a small responsive layout using several of these properties. Would you like that?

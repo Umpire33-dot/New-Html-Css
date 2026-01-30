@@ -1,0 +1,20 @@
+Suggested minor HTML tweaks for New-Html-Css/Html-Css.html:
+
+1) Add an id for "top" if you plan to use a Back-to-top link:
+   <body id="top">
+
+2) Consider updating the copyright year to 2026 in the footer.
+
+3) Accessibility / markup fixes to consider when editing further:
+   - Ensure all anchor text is descriptive and has proper closing tags.
+   - Add alt attributes to images when you add them: <img src="..." alt="description">
+   - Ensure lists are properly closed (</ul>) and that elements are nested correctly.
+
+4) Optional styling suggestion:
+   - Add a small responsive media query to switch #gold to a single-column layout on narrow viewports:
+     @media (max-width: 700px) {
+       #gold { grid-template-columns: 1fr; }
+     }
+
+5) Filename consistency:
+   - Your HTML links to `style.css`. Make sure you edit or deploy the same stylesheet name. The preview file provided is `style-fixed.css` so either replace `style.css` with this content or rename the preview file to `style.css` when ready.
